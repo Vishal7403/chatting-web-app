@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    
+</head>
+<body>
+    <h1> socket io sample</h1>
+    <div id='username'>
+
+    </div>
+    <div id='loginBox'>
+        <input type="text" id="inpUsername" placeholder="username">
+        <input type="password" id="inpPass" placeholder="password">
+        <button id="btnstart">START</button>
+    </div>
+    <div id="chatBox">
+    <input type="text"  id="inpToUser" placeholder="send to user(default everyone)"> 
+    <input id="inpMsg" placeholder="New Message">
+    <button id="sendMsg">send</button>
+    <ul id="ullist"></ul>
+</div>
+</body>
+</html>
