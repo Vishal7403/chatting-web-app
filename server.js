@@ -4,6 +4,7 @@ const app=express()
 const socketio=require('socket.io')
 const server=http.createServer(app)
 const io=socketio(server)
+const server_port=process.env.PORT||5566
 let Users={}
 let socketMap={}
 io.on('connection',(socket)=>{
@@ -46,7 +47,7 @@ io.on('connection',(socket)=>{
     
 
 app.use('/',express.static(__dirname+'/public'))
-server.listen(5566,()=>{
+server.listen(server_port,()=>{
     console.log('server started at http://localhost:5566')
 })
 //socket.emit send the message to only itself whereas io.emit send messasge to all sockets
