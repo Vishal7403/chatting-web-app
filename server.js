@@ -8,7 +8,6 @@ const server_port=process.env.PORT||5566
 let Users={}
 let socketMap={}
 io.on('connection',(socket)=>{
-    //console.log('connected with socket id=',socket.id)
         function login(s,d)
         {
             s.join(d.username)
